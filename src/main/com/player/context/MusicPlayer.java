@@ -12,7 +12,6 @@ public class MusicPlayer {
     private List<Music> playlist = new ArrayList<>();
     private int currentIndex = 0;
 
-    // ✅ CORREÇÃO AQUI
     public void setState(PlayerState state) {
         this.currentState = state;
     }
@@ -40,5 +39,25 @@ public class MusicPlayer {
         if (!playlist.isEmpty()) {
             currentIndex = (currentIndex - 1 + playlist.size()) % playlist.size();
         }
+    }
+
+    public void play() {
+        currentState.play(this);
+    }
+
+    public void pause() {
+        currentState.pause(this);
+    }
+
+    public void stop() {
+        currentState.stop(this);
+    }
+
+    public void next() {
+        currentState.next(this);
+    }
+
+    public void previous() {
+        currentState.previous(this);
     }
 }
