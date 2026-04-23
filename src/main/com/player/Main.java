@@ -10,8 +10,9 @@ public class Main {
 
         MusicPlayer player = new MusicPlayer();
 
-        player.addMusic(new Music("Musica 1", "Artista A", 180));
-        player.addMusic(new Music("Musica 2", "Artista B", 200));
+        player.addMusic(new Music("Blinding Lights", "The Weeknd", 200));
+        player.addMusic(new Music("Shape of You", "Ed Sheeran", 240));
+        player.addMusic(new Music("As It Was", "Harry Styles", 170));
 
         player.setState(new StoppedState());
 
